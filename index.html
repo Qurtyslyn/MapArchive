@@ -89,15 +89,8 @@
         //Colors to rotate through for routes
         var colors = ['red','teal','darkorange','darkgreen','hotpink','blue','gold','violet','maroon','deepskyblue'];
 
-        //Create the Topo layer of the Map
-        var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-            attribution: 'Map Data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | Map Display: &copy; <a href="http://opentopomap.org/"> OpenTopoMap </a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
-            maxZoom: 18,
-            subdomains: ['a','b','c']
-        });
-
-        //Create 2nd Topo layer for testing
-        var topo2 = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+        //Create Topo layer of the map
+        var topo = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
             maxZoom: 20,
             attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
@@ -130,7 +123,6 @@
                 expanded : true,
                 layers : {
                     "Topographic" : topo,
-                    "Topographic 2" : topo2,
                     "Basic" : streets,
                     "Satellite" : imagery
                 }
@@ -218,10 +210,6 @@
                 {
                     label: 'Topographic',
                     layer: topo
-                },
-                {
-                    label: 'Topographic 2',
-                    layer: topo2
                 },
                 {
                     label: 'Basic',
