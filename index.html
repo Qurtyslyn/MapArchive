@@ -224,12 +224,12 @@
                 }
             ]
         };
-        var overlayTree = {label: 'Race Tracks', collapsed: true, children: []};
+        var overlayTree = {label: 'Race Tracks', children: []};
         
         //Add organizations to Menu
         for(let i in orgs)
         {
-            overlayTree.children.push({label: orgs[i], selectAllCheckbox: true, children: []});
+            overlayTree.children.push({label: orgs[i], collapsed: true, selectAllCheckbox: true, children: []});
         }
 
         //Add race maps to Menu
