@@ -260,7 +260,7 @@
                 {
                     if(overlayTree.children[j].children.length == 0)
                     {
-                        overlayTree.children[j].children.push({label: nameArray[1], selectAllCheckbox: true, children: []});
+                        overlayTree.children[j].children.push({label: nameArray[1], collapsed: true, selectAllCheckbox: true, children: []});
                         overlayTree.children[j].children[0].children.push({label: name, layer: group});
                     }
                     else if (overlayTree.children[j].children[overlayTree.children[j].children.length-1].label == nameArray[1])
@@ -269,7 +269,7 @@
                     }
                     else
                     {
-                        overlayTree.children[j].children.push({label: nameArray[1], selectAllCheckbox: true, children: []});
+                        overlayTree.children[j].children.push({label: nameArray[1], collapsed: true, selectAllCheckbox: true, children: []});
                         overlayTree.children[j].children[overlayTree.children[j].children.length-1].children.push({label: name, layer: group});
                     }
                 }
